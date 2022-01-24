@@ -23,7 +23,7 @@ function debug_log( $msg, $name = '' ) {
         $trace=debug_backtrace();
         $name = ( '' == $name ) ? $trace[1]['function'] : $name;
 
-        $error_dir = '/var/www/html/campaignkit.log';
+        $error_dir = 'campaignkit.log';
         $msg = print_r( $msg, true );
         $log = $name . "  |  " . $msg . "\n";
         error_log( $log, 3, $error_dir );
